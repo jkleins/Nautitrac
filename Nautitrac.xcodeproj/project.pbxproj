@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		789A8B9C201CEE8B003161B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8B9B201CEE8B003161B1 /* AppDelegate.swift */; };
+		789A8B9E201CEE8B003161B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8B9D201CEE8B003161B1 /* ViewController.swift */; };
+		789A8BA1201CEE8B003161B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A8B9F201CEE8B003161B1 /* Main.storyboard */; };
+		789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */; };
+		789A8BA6201CEE8B003161B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789A8BA5201CEE8B003161B1 /* Assets.xcassets */; };
+		789A8BA9201CEE8B003161B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		789A8B98201CEE8B003161B1 /* Nautitrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nautitrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		789A8B9B201CEE8B003161B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		789A8B9D201CEE8B003161B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		789A8BA0201CEE8B003161B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		789A8BA3201CEE8B003161B1 /* Nautitrac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nautitrac.xcdatamodel; sourceTree = "<group>"; };
+		789A8BA5201CEE8B003161B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		789A8BA8201CEE8B003161B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		789A8BAA201CEE8B003161B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		789A8B95201CEE8B003161B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		789A8B8F201CEE8B003161B1 = {
+			isa = PBXGroup;
+			children = (
+				789A8B9A201CEE8B003161B1 /* Nautitrac */,
+				789A8B99201CEE8B003161B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		789A8B99201CEE8B003161B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				789A8B98201CEE8B003161B1 /* Nautitrac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		789A8B9A201CEE8B003161B1 /* Nautitrac */ = {
+			isa = PBXGroup;
+			children = (
+				789A8B9B201CEE8B003161B1 /* AppDelegate.swift */,
+				789A8B9D201CEE8B003161B1 /* ViewController.swift */,
+				789A8B9F201CEE8B003161B1 /* Main.storyboard */,
+				789A8BA5201CEE8B003161B1 /* Assets.xcassets */,
+				789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */,
+				789A8BAA201CEE8B003161B1 /* Info.plist */,
+				789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */,
+			);
+			path = Nautitrac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		789A8B97201CEE8B003161B1 /* Nautitrac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789A8BAD201CEE8B003161B1 /* Build configuration list for PBXNativeTarget "Nautitrac" */;
+			buildPhases = (
+				789A8B94201CEE8B003161B1 /* Sources */,
+				789A8B95201CEE8B003161B1 /* Frameworks */,
+				789A8B96201CEE8B003161B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nautitrac;
+			productName = Nautitrac;
+			productReference = 789A8B98201CEE8B003161B1 /* Nautitrac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		789A8B90201CEE8B003161B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Seven Bends Software";
+				TargetAttributes = {
+					789A8B97201CEE8B003161B1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 789A8B93201CEE8B003161B1 /* Build configuration list for PBXProject "Nautitrac" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 789A8B8F201CEE8B003161B1;
+			productRefGroup = 789A8B99201CEE8B003161B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				789A8B97201CEE8B003161B1 /* Nautitrac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		789A8B96201CEE8B003161B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789A8BA9201CEE8B003161B1 /* LaunchScreen.storyboard in Resources */,
+				789A8BA6201CEE8B003161B1 /* Assets.xcassets in Resources */,
+				789A8BA1201CEE8B003161B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		789A8B94201CEE8B003161B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789A8B9E201CEE8B003161B1 /* ViewController.swift in Sources */,
+				789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */,
+				789A8B9C201CEE8B003161B1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		789A8B9F201CEE8B003161B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				789A8BA0201CEE8B003161B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				789A8BA8201CEE8B003161B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		789A8BAB201CEE8B003161B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		789A8BAC201CEE8B003161B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		789A8BAE201CEE8B003161B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S5M76MER4G;
+				INFOPLIST_FILE = Nautitrac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SevenBendsSoftware.Nautitrac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		789A8BAF201CEE8B003161B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S5M76MER4G;
+				INFOPLIST_FILE = Nautitrac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SevenBendsSoftware.Nautitrac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		789A8B93201CEE8B003161B1 /* Build configuration list for PBXProject "Nautitrac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789A8BAB201CEE8B003161B1 /* Debug */,
+				789A8BAC201CEE8B003161B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789A8BAD201CEE8B003161B1 /* Build configuration list for PBXNativeTarget "Nautitrac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789A8BAE201CEE8B003161B1 /* Debug */,
+				789A8BAF201CEE8B003161B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				789A8BA3201CEE8B003161B1 /* Nautitrac.xcdatamodel */,
+			);
+			currentVersion = 789A8BA3201CEE8B003161B1 /* Nautitrac.xcdatamodel */;
+			path = Nautitrac.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 789A8B90201CEE8B003161B1 /* Project object */;
+}
