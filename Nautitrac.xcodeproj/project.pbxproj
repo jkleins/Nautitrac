@@ -8,22 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		789A8B9C201CEE8B003161B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8B9B201CEE8B003161B1 /* AppDelegate.swift */; };
-		789A8B9E201CEE8B003161B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8B9D201CEE8B003161B1 /* ViewController.swift */; };
 		789A8BA1201CEE8B003161B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A8B9F201CEE8B003161B1 /* Main.storyboard */; };
 		789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */; };
 		789A8BA6201CEE8B003161B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789A8BA5201CEE8B003161B1 /* Assets.xcassets */; };
 		789A8BA9201CEE8B003161B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */; };
+		789A8BCD201CF623003161B1 /* Boat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A8BCC201CF623003161B1 /* Boat.storyboard */; };
+		789A8BD0201CFC99003161B1 /* TypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BCF201CFC99003161B1 /* TypePicker.swift */; };
+		789A8BD2201CFD14003161B1 /* DraftPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BD1201CFD14003161B1 /* DraftPicker.swift */; };
+		789A8BD4201CFF93003161B1 /* HeightPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BD3201CFF93003161B1 /* HeightPicker.swift */; };
+		789A8BD6201CFFA8003161B1 /* WeightPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BD5201CFFA8003161B1 /* WeightPicker.swift */; };
+		789A8BD8201CFFC9003161B1 /* SpeedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BD7201CFFC9003161B1 /* SpeedPicker.swift */; };
+		789A8BDA201CFFE2003161B1 /* FuelAmountPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BD9201CFFE2003161B1 /* FuelAmountPicker.swift */; };
+		789A8BDF201D07F0003161B1 /* BoatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A8BDE201D07F0003161B1 /* BoatTableViewController.swift */; };
+		78ED8B6E2104D1F800D151BA /* LogEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ED8B6D2104D1F800D151BA /* LogEntry.storyboard */; };
+		78ED8B702104D60300D151BA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78ED8B6F2104D60300D151BA /* Map.storyboard */; };
+		78ED8B732104D79200D151BA /* TripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B722104D79200D151BA /* TripsTableViewController.swift */; };
+		78ED8B752104D7A900D151BA /* LogEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B742104D7A900D151BA /* LogEntryTableViewController.swift */; };
+		78ED8B772104D90500D151BA /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B762104D90500D151BA /* TripsTableViewCell.swift */; };
+		78ED8B7B2104D9AB00D151BA /* LogEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B7A2104D9AB00D151BA /* LogEntryTableViewCell.swift */; };
+		78ED8B7D2104DA2200D151BA /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B7C2104DA2200D151BA /* TripViewController.swift */; };
+		78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */; };
+		78ED8B83210506B500D151BA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B82210506B500D151BA /* Configuration.swift */; };
+		78ED8B8821051D9100D151BA /* MainLogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		789A8B98201CEE8B003161B1 /* Nautitrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nautitrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		789A8B9B201CEE8B003161B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		789A8B9D201CEE8B003161B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		789A8BA0201CEE8B003161B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		789A8BA3201CEE8B003161B1 /* Nautitrac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nautitrac.xcdatamodel; sourceTree = "<group>"; };
 		789A8BA5201CEE8B003161B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		789A8BA8201CEE8B003161B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		789A8BAA201CEE8B003161B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		789A8BCC201CF623003161B1 /* Boat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Boat.storyboard; sourceTree = "<group>"; };
+		789A8BCF201CFC99003161B1 /* TypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePicker.swift; sourceTree = "<group>"; };
+		789A8BD1201CFD14003161B1 /* DraftPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftPicker.swift; sourceTree = "<group>"; };
+		789A8BD3201CFF93003161B1 /* HeightPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPicker.swift; sourceTree = "<group>"; };
+		789A8BD5201CFFA8003161B1 /* WeightPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightPicker.swift; sourceTree = "<group>"; };
+		789A8BD7201CFFC9003161B1 /* SpeedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedPicker.swift; sourceTree = "<group>"; };
+		789A8BD9201CFFE2003161B1 /* FuelAmountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelAmountPicker.swift; sourceTree = "<group>"; };
+		789A8BDE201D07F0003161B1 /* BoatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatTableViewController.swift; sourceTree = "<group>"; };
+		78ED8B6D2104D1F800D151BA /* LogEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogEntry.storyboard; sourceTree = "<group>"; };
+		78ED8B6F2104D60300D151BA /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		78ED8B722104D79200D151BA /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
+		78ED8B742104D7A900D151BA /* LogEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryTableViewController.swift; sourceTree = "<group>"; };
+		78ED8B762104D90500D151BA /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		78ED8B7A2104D9AB00D151BA /* LogEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryTableViewCell.swift; sourceTree = "<group>"; };
+		78ED8B7C2104DA2200D151BA /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryViewController.swift; sourceTree = "<group>"; };
+		78ED8B82210506B500D151BA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +90,96 @@
 		789A8B9A201CEE8B003161B1 /* Nautitrac */ = {
 			isa = PBXGroup;
 			children = (
-				789A8B9B201CEE8B003161B1 /* AppDelegate.swift */,
-				789A8B9D201CEE8B003161B1 /* ViewController.swift */,
-				789A8B9F201CEE8B003161B1 /* Main.storyboard */,
-				789A8BA5201CEE8B003161B1 /* Assets.xcassets */,
-				789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */,
-				789A8BAA201CEE8B003161B1 /* Info.plist */,
-				789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */,
+				78ED8B8B21052B3E00D151BA /* Application Delegate */,
+				78ED8B84210506BB00D151BA /* Default Configuration Files */,
+				78ED8B712104D6B900D151BA /* View Controllers */,
+				78ED8B792104D96000D151BA /* Table View Cells */,
+				789A8BDB201D0417003161B1 /* Pickers */,
+				789A8BCE201CF943003161B1 /* Storyboards */,
+				78ED8B8C21052B8900D151BA /* Resources */,
+				78ED8B8D21052B9400D151BA /* Accessory Files */,
 			);
 			path = Nautitrac;
+			sourceTree = "<group>";
+		};
+		789A8BCE201CF943003161B1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				789A8B9F201CEE8B003161B1 /* Main.storyboard */,
+				78ED8B6D2104D1F800D151BA /* LogEntry.storyboard */,
+				789A8BCC201CF623003161B1 /* Boat.storyboard */,
+				789A8BA7201CEE8B003161B1 /* LaunchScreen.storyboard */,
+				78ED8B6F2104D60300D151BA /* Map.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		789A8BDB201D0417003161B1 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				789A8BD1201CFD14003161B1 /* DraftPicker.swift */,
+				789A8BD3201CFF93003161B1 /* HeightPicker.swift */,
+				789A8BD5201CFFA8003161B1 /* WeightPicker.swift */,
+				789A8BD7201CFFC9003161B1 /* SpeedPicker.swift */,
+				789A8BD9201CFFE2003161B1 /* FuelAmountPicker.swift */,
+				789A8BCF201CFC99003161B1 /* TypePicker.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		78ED8B712104D6B900D151BA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */,
+				78ED8B722104D79200D151BA /* TripsTableViewController.swift */,
+				78ED8B742104D7A900D151BA /* LogEntryTableViewController.swift */,
+				789A8BDE201D07F0003161B1 /* BoatTableViewController.swift */,
+				78ED8B7C2104DA2200D151BA /* TripViewController.swift */,
+				78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		78ED8B792104D96000D151BA /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78ED8B762104D90500D151BA /* TripsTableViewCell.swift */,
+				78ED8B7A2104D9AB00D151BA /* LogEntryTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		78ED8B84210506BB00D151BA /* Default Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				78ED8B82210506B500D151BA /* Configuration.swift */,
+			);
+			path = "Default Configuration Files";
+			sourceTree = "<group>";
+		};
+		78ED8B8B21052B3E00D151BA /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				789A8B9B201CEE8B003161B1 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		78ED8B8C21052B8900D151BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				789A8BA5201CEE8B003161B1 /* Assets.xcassets */,
+				789A8BA2201CEE8B003161B1 /* Nautitrac.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		78ED8B8D21052B9400D151BA /* Accessory Files */ = {
+			isa = PBXGroup;
+			children = (
+				789A8BAA201CEE8B003161B1 /* Info.plist */,
+			);
+			path = "Accessory Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,7 +209,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Seven Bends Software";
 				TargetAttributes = {
 					789A8B97201CEE8B003161B1 = {
@@ -127,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				789A8BA9201CEE8B003161B1 /* LaunchScreen.storyboard in Resources */,
+				78ED8B6E2104D1F800D151BA /* LogEntry.storyboard in Resources */,
 				789A8BA6201CEE8B003161B1 /* Assets.xcassets in Resources */,
 				789A8BA1201CEE8B003161B1 /* Main.storyboard in Resources */,
+				789A8BCD201CF623003161B1 /* Boat.storyboard in Resources */,
+				78ED8B702104D60300D151BA /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +257,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789A8B9E201CEE8B003161B1 /* ViewController.swift in Sources */,
+				789A8BD4201CFF93003161B1 /* HeightPicker.swift in Sources */,
+				78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */,
 				789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */,
+				78ED8B732104D79200D151BA /* TripsTableViewController.swift in Sources */,
+				789A8BD8201CFFC9003161B1 /* SpeedPicker.swift in Sources */,
+				789A8BDA201CFFE2003161B1 /* FuelAmountPicker.swift in Sources */,
+				78ED8B83210506B500D151BA /* Configuration.swift in Sources */,
+				789A8BDF201D07F0003161B1 /* BoatTableViewController.swift in Sources */,
+				789A8BD2201CFD14003161B1 /* DraftPicker.swift in Sources */,
+				789A8BD6201CFFA8003161B1 /* WeightPicker.swift in Sources */,
+				78ED8B8821051D9100D151BA /* MainLogEntryViewController.swift in Sources */,
 				789A8B9C201CEE8B003161B1 /* AppDelegate.swift in Sources */,
+				78ED8B7D2104DA2200D151BA /* TripViewController.swift in Sources */,
+				78ED8B7B2104D9AB00D151BA /* LogEntryTableViewCell.swift in Sources */,
+				78ED8B772104D90500D151BA /* TripsTableViewCell.swift in Sources */,
+				78ED8B752104D7A900D151BA /* LogEntryTableViewController.swift in Sources */,
+				789A8BD0201CFC99003161B1 /* TypePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +313,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -188,6 +321,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -238,6 +372,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +380,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
