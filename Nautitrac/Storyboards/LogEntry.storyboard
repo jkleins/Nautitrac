@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8y-S4-6q5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481.25" y="644.53125"/>
+            <point key="canvasLocation" x="3835" y="750"/>
         </scene>
         <!--Trips-->
         <scene sceneID="1rQ-8S-nHc">
@@ -93,17 +93,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2R-06-GSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="644.53125"/>
+            <point key="canvasLocation" x="2304" y="750"/>
+        </scene>
+        <!--New Trip-->
+        <scene sceneID="7kb-tV-GIY">
+            <objects>
+                <viewController id="Wz0-09-gUj" customClass="NewTripViewController" customModule="Nautitrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LdK-t5-etk">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QRe-FG-r0I">
+                                <rect key="frame" x="20" y="541" width="794" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5N-KA-nnt">
+                                        <rect key="frame" x="0.0" y="0.0" width="387" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="Cancel:" destination="Wz0-09-gUj" eventType="touchUpInside" id="TPA-2V-Tc4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-v4-Pj3">
+                                        <rect key="frame" x="407" y="0.0" width="387" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButton:" destination="Wz0-09-gUj" eventType="touchUpInside" id="hAF-ID-rax"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QRe-FG-r0I" firstAttribute="leading" secondItem="ri2-Lc-A5z" secondAttribute="leading" constant="20" id="2q2-9G-hYD"/>
+                            <constraint firstItem="QRe-FG-r0I" firstAttribute="centerY" secondItem="LdK-t5-etk" secondAttribute="centerY" id="D6l-fA-xUY"/>
+                            <constraint firstItem="ri2-Lc-A5z" firstAttribute="trailing" secondItem="QRe-FG-r0I" secondAttribute="trailing" constant="20" id="gxG-hp-OFT"/>
+                            <constraint firstItem="QRe-FG-r0I" firstAttribute="centerX" secondItem="LdK-t5-etk" secondAttribute="centerX" id="rEx-vH-c0N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ri2-Lc-A5z"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Trip" id="IS4-za-ICT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRw-AL-4nW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3481" y="-885"/>
         </scene>
         <!--Trips-->
         <scene sceneID="Sdy-1C-SBO">
             <objects>
                 <tableViewController storyboardIdentifier="TripsTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="HtH-Rw-Pg6" customClass="TripsTableViewController" customModule="Nautitrac" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZZT-uy-M6D">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Enter Place or Date ..." id="TNN-WK-wjB">
+                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Enter Place or Date ..." id="TNN-WK-wjB">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
@@ -152,6 +195,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B9S-gQ-IPo">
                             <connections>
                                 <action selector="AddTrip:" destination="HtH-Rw-Pg6" id="wq7-1C-6hm"/>
+                                <segue destination="7PB-6R-Gag" kind="presentation" id="aez-kz-qkf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -160,12 +204,12 @@
             </objects>
             <point key="canvasLocation" x="1952.8" y="-113.79310344827587"/>
         </scene>
-        <!--Log Entry Table View Controller-->
+        <!--Log Entries-->
         <scene sceneID="p2v-eM-UXV">
             <objects>
                 <tableViewController storyboardIdentifier="LogEntryTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6G6-J8-5Oj" customClass="LogEntryTableViewController" customModule="Nautitrac" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pWN-c2-SPM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pWN-c2-SPM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -204,10 +248,19 @@
                             <outlet property="delegate" destination="6G6-J8-5Oj" id="P36-qv-8DA"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Log Entries" id="9AU-7t-mdF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tc3-nm-xii">
+                            <connections>
+                                <segue destination="6YC-o0-urz" kind="showDetail" identifier="AddLogEntryDetailSegue" id="OSa-eQ-eeY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPP-uC-SnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701.5999999999999" y="-114.69265367316342"/>
+            <point key="canvasLocation" x="2701" y="-114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zas-k3-z4w">
@@ -223,12 +276,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8Y-YK-NDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="-113"/>
+            <point key="canvasLocation" x="1214" y="-115"/>
         </scene>
-        <!--Log Entry-->
+        <!--Log Entry Item-->
         <scene sceneID="GNJ-rY-2Iq">
             <objects>
-                <splitViewController storyboardIdentifier="LogEntrySplitView" title="Log Entry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s1n-gS-f8X" customClass="MainLogEntryViewController" customModule="Nautitrac" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="LogEntrySplitView" title="Log Entry Item" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s1n-gS-f8X" customClass="MainLogEntryViewController" customModule="Nautitrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="w5b-AC-NJs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Od2-ho-b52" kind="relationship" relationship="masterViewController" id="en7-yX-d5o"/>
                         <segue destination="gOd-MD-e4V" kind="relationship" relationship="detailViewController" id="uoH-ts-yTz"/>
@@ -254,12 +309,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZ7-Rj-rtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="645"/>
+            <point key="canvasLocation" x="1568" y="751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dDj-fh-Ntx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6YC-o0-urz" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogEntryDetail" automaticallyAdjustsScrollViewInsets="NO" id="6YC-o0-urz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FC9-Mw-V9H">
                         <rect key="frame" x="0.0" y="20" width="834" height="44"/>
@@ -272,10 +327,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMV-pH-8at" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2698" y="645"/>
+            <point key="canvasLocation" x="3052" y="751"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bfy-8D-akT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7PB-6R-Gag" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gUR-mU-6eo">
+                        <rect key="frame" x="0.0" y="20" width="834" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wz0-09-gUj" kind="relationship" relationship="rootViewController" id="QuM-wF-ur2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXy-v9-5om" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701" y="-885"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="OSa-eQ-eeY"/>
         <segue reference="Lqi-kO-13b"/>
     </inferredMetricsTieBreakers>
 </document>

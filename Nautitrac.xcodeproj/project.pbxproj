@@ -30,6 +30,7 @@
 		78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */; };
 		78ED8B83210506B500D151BA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B82210506B500D151BA /* Configuration.swift */; };
 		78ED8B8821051D9100D151BA /* MainLogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */; };
+		78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8E2105351100D151BA /* NewTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryViewController.swift; sourceTree = "<group>"; };
 		78ED8B82210506B500D151BA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogEntryViewController.swift; sourceTree = "<group>"; };
+		78ED8B8E2105351100D151BA /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		789A8B9A201CEE8B003161B1 /* Nautitrac */ = {
 			isa = PBXGroup;
 			children = (
+				78ED8B902105433500D151BA /* Model Objects */,
 				78ED8B8B21052B3E00D151BA /* Application Delegate */,
 				78ED8B84210506BB00D151BA /* Default Configuration Files */,
 				78ED8B712104D6B900D151BA /* View Controllers */,
@@ -97,6 +100,7 @@
 				789A8BDB201D0417003161B1 /* Pickers */,
 				789A8BCE201CF943003161B1 /* Storyboards */,
 				78ED8B8C21052B8900D151BA /* Resources */,
+				789A8BAA201CEE8B003161B1 /* Info.plist */,
 				78ED8B8D21052B9400D151BA /* Accessory Files */,
 			);
 			path = Nautitrac;
@@ -131,10 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */,
-				78ED8B722104D79200D151BA /* TripsTableViewController.swift */,
-				78ED8B742104D7A900D151BA /* LogEntryTableViewController.swift */,
 				789A8BDE201D07F0003161B1 /* BoatTableViewController.swift */,
+				78ED8B8E2105351100D151BA /* NewTripViewController.swift */,
+				78ED8B722104D79200D151BA /* TripsTableViewController.swift */,
 				78ED8B7C2104DA2200D151BA /* TripViewController.swift */,
+				78ED8B742104D7A900D151BA /* LogEntryTableViewController.swift */,
 				78ED8B7E2104DA3800D151BA /* LogEntryViewController.swift */,
 			);
 			path = "View Controllers";
@@ -177,9 +182,15 @@
 		78ED8B8D21052B9400D151BA /* Accessory Files */ = {
 			isa = PBXGroup;
 			children = (
-				789A8BAA201CEE8B003161B1 /* Info.plist */,
 			);
 			path = "Accessory Files";
+			sourceTree = "<group>";
+		};
+		78ED8B902105433500D151BA /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				789A8BD4201CFF93003161B1 /* HeightPicker.swift in Sources */,
 				78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */,
+				78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */,
 				789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */,
 				78ED8B732104D79200D151BA /* TripsTableViewController.swift in Sources */,
 				789A8BD8201CFFC9003161B1 /* SpeedPicker.swift in Sources */,
@@ -349,6 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;

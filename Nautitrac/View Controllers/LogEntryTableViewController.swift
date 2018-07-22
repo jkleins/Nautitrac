@@ -93,10 +93,22 @@ class LogEntryTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == storyboardIDs.logEntryDetailSegue {
-             let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
+        
+        switch segue.identifier {
+        // Occurs when a log entry is selected in the list
+        case storyboardIDs.logEntryDetailSegue:
+            let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
+            detailVC.textToPutInTitleLabel = "Old Log Entry"
+        // Occurs when the "+" button is selected
+        case storyboardIDs.addLogEntryDetailSegue:
+            let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
+            //create a new log entry object and add to the LogEntryViewController
             detailVC.textToPutInTitleLabel = "New Log Entry"
+            
+        default:
+            break
         }
+ 
     }
     
 

@@ -386,7 +386,9 @@
                             <outlet property="delegate" destination="q8n-Gn-Mob" id="B2C-9p-Tjf"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="SLp-Ra-D5s"/>
                     <navigationItem key="navigationItem" title="Boat" id="IMT-Er-RF4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLl-Lz-Md4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

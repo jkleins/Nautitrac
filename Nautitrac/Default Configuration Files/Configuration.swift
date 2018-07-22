@@ -12,4 +12,7 @@ enum storyboardIDs {
     static let logEntryDetailSegue = "LogEntryDetailSegue"
     static let tripDetailSegue = "TripDetailSegue"
     static let logEntryTableSegue = "LogEntryTableSegue"
+    static let tripsTableView = "TripsTableView"
+    static let logEntryTableView = "LogEntryTableView"
+    static let addLogEntryDetailSegue = "AddLogEntryDetailSegue"
 }
