@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class TripsTableViewController: UITableViewController {
+    
+    //MARK: - Properties
+    
+    private lazy var fetchedResultsController: NSFetchedResultsController<Trip> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Trip.toDate), ascending: false)]
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.coreDataManager.managedObjectContext,
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
 
-     
-    @IBAction func AddTrip(_ sender: Any) {
-    }
+    private var coreDataManager = CoreDataManager(modelName: "Trips")
+
+    //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +47,14 @@ class TripsTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Functions
+    @IBAction func AddTrip(_ sender: Any) {
+    }
+
+    func updateView() {
+        
     }
 
     // MARK: - Table view data source
@@ -108,6 +136,47 @@ class TripsTableViewController: UITableViewController {
         }
         
     }
-    
+}
 
+extension TripsTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        updateView()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView(tableView, cellForRowAt: indexPath) as? TripsTableViewCell {
+                configure(cell, at: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)            }
+        }
+    }
+    
+    private func configure(_ cell: TripsTableViewCell,at indexPath: IndexPath) {
+        let trip = fetchedResultsController.object(at: indexPath)
+        
+//        cell.titleLabel.text = note.title
+//        cell.contentsLabel.text = note.contents
+//        cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
+    }
+    
 }

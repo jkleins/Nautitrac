@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C205" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Boat" representedClassName="Boat" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="draft" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fuelAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="insuranceContact" optional="YES" attributeType="Transformable" syncable="YES"/>
@@ -11,6 +12,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="registrationNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="engines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Engine" inverseName="boat" inverseEntity="Engine" syncable="YES"/>
@@ -18,12 +20,15 @@
     </entity>
     <entity name="Crew" representedClassName="Crew" syncable="YES" codeGenerationType="class">
         <attribute name="contactInfo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="initials" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="logsEntered" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LogEntry" inverseName="crewEntering" inverseEntity="LogEntry" syncable="YES"/>
         <relationship name="tripsTaken" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="crew" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="Engine" representedClassName="Engine" syncable="YES" codeGenerationType="class">
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="estConsumption" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fuelConsumption" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fuelType" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,11 +36,13 @@
         <attribute name="hours" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="manufacturer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="boat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Boat" inverseName="engines" inverseEntity="Boat" syncable="YES"/>
     </entity>
     <entity name="LogEntry" representedClassName="LogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="course" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateOfEntry" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="engineHours" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="engineOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -43,6 +50,7 @@
         <attribute name="logReading" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="weartherForce" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="weatherDescription" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="crewEntering" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Crew" inverseName="logsEntered" inverseEntity="Crew" syncable="YES"/>
@@ -54,11 +62,13 @@
         <attribute name="aveWeatherForce" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="engineUse" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="fuelUse" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="milesTraveled" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="boat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Boat" inverseName="trips" inverseEntity="Boat" syncable="YES"/>
         <relationship name="crew" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Crew" inverseName="tripsTaken" inverseEntity="Crew" syncable="YES"/>
         <relationship name="fromWaypoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="startingPoints" inverseEntity="Waypoint" syncable="YES"/>
@@ -67,18 +77,20 @@
     </entity>
     <entity name="Waypoint" representedClassName="Waypoint" syncable="YES" codeGenerationType="class">
         <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="endingPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="toWaypoint" inverseEntity="Trip" syncable="YES"/>
         <relationship name="logPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LogEntry" inverseName="waypoint" inverseEntity="LogEntry" syncable="YES"/>
         <relationship name="startingPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="fromWaypoint" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Boat" positionX="-63" positionY="-18" width="128" height="255"/>
-        <element name="Crew" positionX="-54" positionY="81" width="128" height="120"/>
-        <element name="Engine" positionX="-36" positionY="90" width="128" height="165"/>
-        <element name="LogEntry" positionX="-18" positionY="99" width="128" height="255"/>
-        <element name="Trip" positionX="0" positionY="108" width="128" height="255"/>
-        <element name="Waypoint" positionX="18" positionY="117" width="128" height="135"/>
+        <element name="Boat" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Crew" positionX="-54" positionY="81" width="128" height="150"/>
+        <element name="Engine" positionX="-36" positionY="90" width="128" height="195"/>
+        <element name="LogEntry" positionX="-18" positionY="99" width="128" height="285"/>
+        <element name="Trip" positionX="0" positionY="108" width="128" height="285"/>
+        <element name="Waypoint" positionX="18" positionY="117" width="128" height="165"/>
     </elements>
 </model>

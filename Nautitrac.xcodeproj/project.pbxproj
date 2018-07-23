@@ -31,6 +31,8 @@
 		78ED8B83210506B500D151BA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B82210506B500D151BA /* Configuration.swift */; };
 		78ED8B8821051D9100D151BA /* MainLogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */; };
 		78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8E2105351100D151BA /* NewTripViewController.swift */; };
+		78ED8BAB21054D1600D151BA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BAA21054D1600D151BA /* CoreDataManager.swift */; };
+		78ED8BAD210554E300D151BA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BAC210554E300D151BA /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		78ED8B82210506B500D151BA /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		78ED8B8721051D9100D151BA /* MainLogEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogEntryViewController.swift; sourceTree = "<group>"; };
 		78ED8B8E2105351100D151BA /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
+		78ED8BAA21054D1600D151BA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		78ED8BAC210554E300D151BA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +96,13 @@
 		789A8B9A201CEE8B003161B1 /* Nautitrac */ = {
 			isa = PBXGroup;
 			children = (
-				78ED8B902105433500D151BA /* Model Objects */,
+				78ED8BAE210554EC00D151BA /* Extensions */,
 				78ED8B8B21052B3E00D151BA /* Application Delegate */,
 				78ED8B84210506BB00D151BA /* Default Configuration Files */,
 				78ED8B712104D6B900D151BA /* View Controllers */,
 				78ED8B792104D96000D151BA /* Table View Cells */,
 				789A8BDB201D0417003161B1 /* Pickers */,
+				78ED8BA921054D1600D151BA /* Managers */,
 				789A8BCE201CF943003161B1 /* Storyboards */,
 				78ED8B8C21052B8900D151BA /* Resources */,
 				789A8BAA201CEE8B003161B1 /* Info.plist */,
@@ -186,11 +191,20 @@
 			path = "Accessory Files";
 			sourceTree = "<group>";
 		};
-		78ED8B902105433500D151BA /* Model Objects */ = {
+		78ED8BA921054D1600D151BA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				78ED8BAA21054D1600D151BA /* CoreDataManager.swift */,
 			);
-			path = "Model Objects";
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		78ED8BAE210554EC00D151BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78ED8BAC210554E300D151BA /* Trip.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED8BAD210554E300D151BA /* Trip.swift in Sources */,
 				789A8BD4201CFF93003161B1 /* HeightPicker.swift in Sources */,
 				78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */,
 				78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */,
+				78ED8BAB21054D1600D151BA /* CoreDataManager.swift in Sources */,
 				789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */,
 				78ED8B732104D79200D151BA /* TripsTableViewController.swift in Sources */,
 				789A8BD8201CFFC9003161B1 /* SpeedPicker.swift in Sources */,
