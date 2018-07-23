@@ -16,3 +16,12 @@ enum storyboardIDs {
     static let logEntryTableView = "LogEntryTableView"
     static let addLogEntryDetailSegue = "AddLogEntryDetailSegue"
 }
+enum modelNames {
+    static let coreModel = "Nautitrac"
+    static let Trips = "Trips"
+    static let LogEntry = "LogEntry"
+}
+enum tableCellTypes {
+    static let TripsTableViewCell = "TripsTableViewCell"
+    static let LogEntryTableCell = "LogEntryTableCell"
+}

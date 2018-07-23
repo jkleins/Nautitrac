@@ -30,7 +30,7 @@ class TripsTableViewController: UITableViewController {
         return fetchedResultsController
     }()
 
-    private var coreDataManager = CoreDataManager(modelName: "Trips")
+    private var coreDataManager = CoreDataManager(modelName: modelNames.coreModel)
 
     //MARK: - View Lifecycle
     
@@ -71,7 +71,7 @@ class TripsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TripTableViewCell", for: indexPath) as! TripsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellTypes.TripsTableViewCell, for: indexPath) as! TripsTableViewCell
 
         // Configure the cell...
         cell.tripTitle.text = "Trip Title"
@@ -173,10 +173,13 @@ extension TripsTableViewController: NSFetchedResultsControllerDelegate {
     
     private func configure(_ cell: TripsTableViewCell,at indexPath: IndexPath) {
         let trip = fetchedResultsController.object(at: indexPath)
+        let origin = trip.fromWaypoint?.name ?? "?"
+        let destination = trip.toWaypoint?.name ?? "?"
+        let originDate = trip.fromDate?.description ?? "?"
+        let destinationDate = trip.toDate?.description ?? "?"
         
-//        cell.titleLabel.text = note.title
-//        cell.contentsLabel.text = note.contents
-//        cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
+        cell.tripTitle.text = origin + " - " + destination
+        cell.tripDate.text =  originDate + " - " + destinationDate
     }
     
 }

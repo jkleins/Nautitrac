@@ -7,10 +7,36 @@
 //
 
 import UIKit
+import CoreData
 
 class LogEntryTableViewController: UITableViewController {
     
-    var sampleTitleNumber = 0
+    //MARK: - Properties
+    
+    var trip: Trip?
+    
+    private lazy var fetchedResultsController: NSFetchedResultsController<LogEntry> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<LogEntry> = LogEntry.fetchRequest()
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(LogEntry.dateOfEntry), ascending: false)]
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.coreDataManager.managedObjectContext,
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
+    
+    private var coreDataManager = CoreDataManager(modelName: modelNames.coreModel)
+    
+
+    
+    //MARK: - View Lifecycle
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,33 +46,50 @@ class LogEntryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        fetchLogEntries()
+        updateView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: - Functions
+    
+    private func fetchLogEntries() {
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print("Unable to Perform Fetch Request")
+            print("\(error), \(error.localizedDescription)")
+        }
+    }
+    
+    func updateView() {
+        
+    }
+
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        guard let sections = fetchedResultsController.sections else { return 0 }
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 4
+        guard let section = fetchedResultsController.sections?[section] else { return 0 }
+        return section.numberOfObjects
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LogEntryTableCell", for: indexPath) as! LogEntryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellTypes.LogEntryTableCell, for: indexPath) as! LogEntryTableViewCell
 
         // Configure the cell...
-        cell.logEntryTitle.text = "Log Entry Title - " + String(sampleTitleNumber)
-        cell.logEntryDate.text = "Date/Location/Etc"
-
+        configure(cell, at: indexPath)
         return cell
     }
     
@@ -98,18 +141,65 @@ class LogEntryTableViewController: UITableViewController {
         // Occurs when a log entry is selected in the list
         case storyboardIDs.logEntryDetailSegue:
             let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
-            detailVC.textToPutInTitleLabel = "Old Log Entry"
+            
         // Occurs when the "+" button is selected
         case storyboardIDs.addLogEntryDetailSegue:
             let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
             //create a new log entry object and add to the LogEntryViewController
-            detailVC.textToPutInTitleLabel = "New Log Entry"
+            detailVC.logEntry = LogEntry()
+            detailVC.logEntry?.trip =
             
         default:
             break
         }
  
     }
-    
+}
 
+extension LogEntryTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        updateView()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView(tableView, cellForRowAt: indexPath) as? LogEntryTableViewCell {
+                configure(cell, at: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)            }
+        }
+    }
+    
+    private func configure(_ cell: LogEntryTableViewCell,at indexPath: IndexPath) {
+        let logEntry = fetchedResultsController.object(at: indexPath)
+        let dateTime = logEntry.dateOfEntry ?? Date()
+        let latitude = logEntry.latitude
+        let longitude = logEntry.longitude
+        let course = logEntry.course
+        let speed = logEntry.speed
+
+        cell.titleLabel.text = String(latitude) + String(longitude)
+        cell.dateLabel.text =  dateTime.description
+        cell.courseLabel.text = String(course)
+        cell.speedLabel.text = String(speed)
+    }
 }

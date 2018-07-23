@@ -47,12 +47,13 @@
         <attribute name="engineHours" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="engineOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fuelGaugeReading" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="logReading" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="updatedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="weartherForce" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="weatherDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weatherForce" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="crewEntering" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Crew" inverseName="logsEntered" inverseEntity="Crew" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="logEntries" inverseEntity="Trip" syncable="YES"/>
         <relationship name="waypoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waypoint" inverseName="logPoints" inverseEntity="Waypoint" syncable="YES"/>
@@ -89,7 +90,7 @@
         <element name="Boat" positionX="-63" positionY="-18" width="128" height="285"/>
         <element name="Crew" positionX="-54" positionY="81" width="128" height="150"/>
         <element name="Engine" positionX="-36" positionY="90" width="128" height="195"/>
-        <element name="LogEntry" positionX="-18" positionY="99" width="128" height="285"/>
+        <element name="LogEntry" positionX="-18" positionY="99" width="128" height="300"/>
         <element name="Trip" positionX="0" positionY="108" width="128" height="285"/>
         <element name="Waypoint" positionX="18" positionY="117" width="128" height="165"/>
     </elements>

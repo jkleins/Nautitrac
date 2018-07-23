@@ -33,6 +33,8 @@
 		78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8B8E2105351100D151BA /* NewTripViewController.swift */; };
 		78ED8BAB21054D1600D151BA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BAA21054D1600D151BA /* CoreDataManager.swift */; };
 		78ED8BAD210554E300D151BA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BAC210554E300D151BA /* Trip.swift */; };
+		78ED8BB1210619CA00D151BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ED8BB0210619CA00D151BA /* CoreData.framework */; };
+		78ED8BB3210619D400D151BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ED8BB2210619D400D151BA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		78ED8B8E2105351100D151BA /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		78ED8BAA21054D1600D151BA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		78ED8BAC210554E300D151BA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		78ED8BB0210619CA00D151BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		78ED8BB2210619D400D151BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED8BB3210619D400D151BA /* CoreLocation.framework in Frameworks */,
+				78ED8BB1210619CA00D151BA /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,7 @@
 			children = (
 				789A8B9A201CEE8B003161B1 /* Nautitrac */,
 				789A8B99201CEE8B003161B1 /* Products */,
+				78ED8BAF210619C900D151BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +212,15 @@
 				78ED8BAC210554E300D151BA /* Trip.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78ED8BAF210619C900D151BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78ED8BB2210619D400D151BA /* CoreLocation.framework */,
+				78ED8BB0210619CA00D151BA /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

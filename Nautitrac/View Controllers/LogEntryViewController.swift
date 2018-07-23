@@ -10,10 +10,17 @@ import UIKit
 
 class LogEntryViewController: UIViewController {
     
-    var textToPutInTitleLabel = ""
+    var logEntry: LogEntry?
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateTextField: UITextField!
     
+    @IBOutlet weak var courseTextField: UITextField!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var speedTextField: UITextField!
+    
+    //MARTK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,14 +28,45 @@ class LogEntryViewController: UIViewController {
         setupView()
     }
     
-    func setupView() {
-        titleLabel.text = textToPutInTitleLabel
-    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        save()
 
+      }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: - Functions
+    
+    @IBAction func cancelButton(_ sender: Any) {
+    }
+    @IBAction func saveButton(_ sender: Any) {
+        save()
+    }
+    
+    private func save() {
+        guard let logEntry = logEntry else { return }
+        let dateFormatter = DateFormatter()
+        logEntry.dateOfEntry = dateFormatter.date(from: dateTextField.text!) ?? Date()
+        logEntry.latitude = Float(latitudeTextField.text!) ?? 0.0
+        logEntry.longitude = Float(longitudeTextField.text!) ?? 0.0
+        logEntry.course = Float(courseTextField.text!) ?? 0.0
+        logEntry.speed = Float(speedTextField.text!) ?? 0.0
+
+    }
+    func setupView() {
+        dateTextField.text = logEntry?.dateOfEntry?.description
+        latitudeTextField.text = String(logEntry?.latitude ?? 0.0)
+        longitudeTextField.text = String(logEntry?.longitude ?? 0.0)
+        courseTextField.text = String(logEntry?.course ?? 0.0)
+        speedTextField.text = String(logEntry?.speed ?? 0.0)
+        
+    }
+
     
 
     /*

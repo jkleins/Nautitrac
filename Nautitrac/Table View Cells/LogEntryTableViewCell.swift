@@ -10,8 +10,10 @@ import UIKit
 
 class LogEntryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var logEntryTitle: UILabel!
-    @IBOutlet weak var logEntryDate: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var courseLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
