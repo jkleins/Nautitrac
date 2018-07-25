@@ -25,3 +25,4 @@ enum tableCellTypes {
     static let TripsTableViewCell = "TripsTableViewCell"
     static let LogEntryTableCell = "LogEntryTableCell"
 }
+

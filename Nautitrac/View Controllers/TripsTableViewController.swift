@@ -42,6 +42,9 @@ class TripsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setUpView()
+        fetchData()
+        updateView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +55,20 @@ class TripsTableViewController: UITableViewController {
     //MARK: - Functions
     @IBAction func AddTrip(_ sender: Any) {
     }
+    
+    func setUpView() {
+        
+    }
+    
+    func fetchData() {
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            let fetchError = error as NSError
+            print("Unable to Execute Fetch Request")
+            print("\(fetchError), \(fetchError.localizedDescription)")
+        }
+    }
 
     func updateView() {
         
@@ -60,23 +77,21 @@ class TripsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        guard let sections = fetchedResultsController.sections else { return 0 }
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
+        guard let section = fetchedResultsController.sections?[section] else { return 0 }
+        return section.numberOfObjects
+   }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableCellTypes.TripsTableViewCell, for: indexPath) as! TripsTableViewCell
 
         // Configure the cell...
-        cell.tripTitle.text = "Trip Title"
-        cell.tripDate.text = "Trip Dates - Trip Dates"
-
+        configure(cell, at: indexPath)
         return cell
     }
     
@@ -125,13 +140,13 @@ class TripsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == storyboardIDs.tripDetailSegue {
             if let newDetailVC = (segue.destination as! UINavigationController).topViewController as? TripViewController {
-                newDetailVC.textToPutInTitleLabel = "New Trip Entry"
+                
             }
         }
         if segue.identifier == storyboardIDs.logEntryTableSegue {
             if let newDetailVC = segue.destination as? LogEntryTableViewController {
-                newDetailVC.title = "Log Entries"
-                newDetailVC.sampleTitleNumber = self.tableView.indexPathForSelectedRow!.row
+                guard let indexPath = tableView.indexPathForSelectedRow else {return}
+                newDetailVC.trip = fetchedResultsController.object(at: indexPath)
             }
         }
         

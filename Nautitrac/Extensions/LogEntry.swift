@@ -1,13 +1,15 @@
 //
-//  Trip.swift
+//  LogEntry.swift
 //  Nautitrac
 //
-//  Created by James Kleinschmidt on 7/22/18.
+//  Created by James Kleinschmidt on 7/23/18.
 //  Copyright © 2018 Seven Bends Software. All rights reserved.
 //
-import Foundation
 
-extension Trip {
+import Foundation
+import CoreData
+
+extension LogEntry {
     
     var updatedAtAsDate: Date {
         return updatedOn ?? Date()

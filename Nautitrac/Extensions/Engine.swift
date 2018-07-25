@@ -1,13 +1,14 @@
 //
-//  Trip.swift
+//  Engine.swift
 //  Nautitrac
 //
-//  Created by James Kleinschmidt on 7/22/18.
+//  Created by James Kleinschmidt on 7/23/18.
 //  Copyright © 2018 Seven Bends Software. All rights reserved.
 //
+
 import Foundation
 
-extension Trip {
+extension Engine {
     
     var updatedAtAsDate: Date {
         return updatedOn ?? Date()
@@ -22,7 +23,17 @@ extension Trip {
             return Int(uniqueId)
         }
         set {
-            uniqueId = Int32(newValue)
+            uniqueId = Int32(id)
         }
     }
+    
+    var number: Int {
+        get {
+            return Int(numberInBoat)
+        }
+        set {
+            numberInBoat = Int64(newValue)
+        }
+    }
+
 }

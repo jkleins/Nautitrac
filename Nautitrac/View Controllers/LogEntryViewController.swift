@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class LogEntryViewController: UIViewController {
     
     var logEntry: LogEntry?
+    
+//    var managedObjectContext: NSManagedObjectContext?
+//    private var coreDataManager = CoreDataManager(modelName: modelNames.coreModel)
+
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateTextField: UITextField!
@@ -30,7 +35,6 @@ class LogEntryViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        save()
 
       }
 
@@ -43,20 +47,27 @@ class LogEntryViewController: UIViewController {
     //MARK: - Functions
     
     @IBAction func cancelButton(_ sender: Any) {
+        navigationController?.navigationController?.popViewController(animated: true)
     }
     @IBAction func saveButton(_ sender: Any) {
         save()
+        navigationController?.navigationController?.popViewController(animated: true)
+
     }
     
     private func save() {
-        guard let logEntry = logEntry else { return }
-        let dateFormatter = DateFormatter()
-        logEntry.dateOfEntry = dateFormatter.date(from: dateTextField.text!) ?? Date()
-        logEntry.latitude = Float(latitudeTextField.text!) ?? 0.0
-        logEntry.longitude = Float(longitudeTextField.text!) ?? 0.0
-        logEntry.course = Float(courseTextField.text!) ?? 0.0
-        logEntry.speed = Float(speedTextField.text!) ?? 0.0
-
+       guard let managedObjectContext = logEntry?.managedObjectContext else { return }
+         let dateFormatter = DateFormatter()
+        logEntry?.dateOfEntry = dateFormatter.date(from: dateTextField.text!) ?? Date()
+        logEntry?.latitude = Float(latitudeTextField.text!) ?? 0.0
+        logEntry?.longitude = Float(longitudeTextField.text!) ?? 0.0
+        logEntry?.course = Float(courseTextField.text!) ?? 0.0
+        logEntry?.speed = Float(speedTextField.text!) ?? 0.0
+        do {
+            try managedObjectContext.save()
+        } catch  {
+            print("Context could not save")
+        }
     }
     func setupView() {
         dateTextField.text = logEntry?.dateOfEntry?.description

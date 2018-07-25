@@ -21,9 +21,12 @@ class LogEntryTableViewController: UITableViewController {
         
         // Configure Fetch Request
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(LogEntry.dateOfEntry), ascending: false)]
+        var predicate = NSPredicate(format: "%K == %@", "trip.uniqueId", String((trip?.id)!))
+        
+        fetchRequest.predicate = predicate
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                  managedObjectContext: self.coreDataManager.managedObjectContext,
+                                                                  managedObjectContext: (self.trip?.managedObjectContext)!,
                                                                   sectionNameKeyPath: nil,
                                                                   cacheName: nil)
         
@@ -32,8 +35,8 @@ class LogEntryTableViewController: UITableViewController {
         return fetchedResultsController
     }()
     
-    private var coreDataManager = CoreDataManager(modelName: modelNames.coreModel)
-    
+    //private var coreDataManager = CoreDataManager(modelName: modelNames.coreModel)
+
 
     
     //MARK: - View Lifecycle
@@ -46,7 +49,6 @@ class LogEntryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        fetchLogEntries()
         updateView()
     }
 
@@ -67,7 +69,8 @@ class LogEntryTableViewController: UITableViewController {
     }
     
     func updateView() {
-        
+        fetchLogEntries()
+
     }
 
 
@@ -81,6 +84,7 @@ class LogEntryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = fetchedResultsController.sections?[section] else { return 0 }
+        print (section.numberOfObjects)
         return section.numberOfObjects
     }
 
@@ -141,13 +145,18 @@ class LogEntryTableViewController: UITableViewController {
         // Occurs when a log entry is selected in the list
         case storyboardIDs.logEntryDetailSegue:
             let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            detailVC.logEntry = fetchedResultsController.object(at: indexPath)
             
         // Occurs when the "+" button is selected
         case storyboardIDs.addLogEntryDetailSegue:
             let detailVC = (segue.destination as! UINavigationController).topViewController as! LogEntryViewController
             //create a new log entry object and add to the LogEntryViewController
-            detailVC.logEntry = LogEntry()
-            detailVC.logEntry?.trip =
+            let logEntry = LogEntry(context: (trip?.managedObjectContext)!)
+            logEntry.trip = trip!
+            
+            logEntry.id = 400
+            detailVC.logEntry = logEntry
             
         default:
             break

@@ -1,13 +1,14 @@
 //
-//  Trip.swift
+//  Boat.swift
 //  Nautitrac
 //
-//  Created by James Kleinschmidt on 7/22/18.
+//  Created by James Kleinschmidt on 7/23/18.
 //  Copyright © 2018 Seven Bends Software. All rights reserved.
 //
+
 import Foundation
 
-extension Trip {
+extension Boat {
     
     var updatedAtAsDate: Date {
         return updatedOn ?? Date()

@@ -35,6 +35,12 @@
 		78ED8BAD210554E300D151BA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BAC210554E300D151BA /* Trip.swift */; };
 		78ED8BB1210619CA00D151BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ED8BB0210619CA00D151BA /* CoreData.framework */; };
 		78ED8BB3210619D400D151BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ED8BB2210619D400D151BA /* CoreLocation.framework */; };
+		78ED8BB52106346000D151BA /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BB42106346000D151BA /* DefaultData.swift */; };
+		78ED8BB72106468300D151BA /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BB62106468300D151BA /* LogEntry.swift */; };
+		78ED8BB921064B1000D151BA /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BB821064B1000D151BA /* Boat.swift */; };
+		78ED8BBB21064B2300D151BA /* Waypoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BBA21064B2300D151BA /* Waypoints.swift */; };
+		78ED8BBD21064B3C00D151BA /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BBC21064B3C00D151BA /* Crew.swift */; };
+		78ED8BBF21064B4700D151BA /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED8BBE21064B4700D151BA /* Engine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,12 @@
 		78ED8BAC210554E300D151BA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		78ED8BB0210619CA00D151BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		78ED8BB2210619D400D151BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		78ED8BB42106346000D151BA /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
+		78ED8BB62106468300D151BA /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		78ED8BB821064B1000D151BA /* Boat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
+		78ED8BBA21064B2300D151BA /* Waypoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoints.swift; sourceTree = "<group>"; };
+		78ED8BBC21064B3C00D151BA /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		78ED8BBE21064B4700D151BA /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				78ED8B82210506B500D151BA /* Configuration.swift */,
+				78ED8BB42106346000D151BA /* DefaultData.swift */,
 			);
 			path = "Default Configuration Files";
 			sourceTree = "<group>";
@@ -210,6 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				78ED8BAC210554E300D151BA /* Trip.swift */,
+				78ED8BB62106468300D151BA /* LogEntry.swift */,
+				78ED8BB821064B1000D151BA /* Boat.swift */,
+				78ED8BBA21064B2300D151BA /* Waypoints.swift */,
+				78ED8BBC21064B3C00D151BA /* Crew.swift */,
+				78ED8BBE21064B4700D151BA /* Engine.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,9 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED8BBB21064B2300D151BA /* Waypoints.swift in Sources */,
+				78ED8BBF21064B4700D151BA /* Engine.swift in Sources */,
+				78ED8BB921064B1000D151BA /* Boat.swift in Sources */,
 				78ED8BAD210554E300D151BA /* Trip.swift in Sources */,
 				789A8BD4201CFF93003161B1 /* HeightPicker.swift in Sources */,
+				78ED8BBD21064B3C00D151BA /* Crew.swift in Sources */,
 				78ED8B7F2104DA3800D151BA /* LogEntryViewController.swift in Sources */,
+				78ED8BB72106468300D151BA /* LogEntry.swift in Sources */,
+				78ED8BB52106346000D151BA /* DefaultData.swift in Sources */,
 				78ED8B8F2105351100D151BA /* NewTripViewController.swift in Sources */,
 				78ED8BAB21054D1600D151BA /* CoreDataManager.swift in Sources */,
 				789A8BA4201CEE8B003161B1 /* Nautitrac.xcdatamodeld in Sources */,
